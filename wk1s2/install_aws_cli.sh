@@ -31,6 +31,12 @@ install_aws_cli_windows() {
     echo "AWS CLI installed successfully on Windows (WSL)."
 }
 
+# Run AWS CLI on Docker
+if [ "$1" == "--docker" ]; then
+    ./install_aws_cli_docker.sh
+    exit 0
+fi
+
 OS="$(uname -s)"
 case "${OS}" in
     Darwin)
