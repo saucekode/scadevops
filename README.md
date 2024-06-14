@@ -25,7 +25,7 @@ Successfully pulled amazon/aws-cli image and spun up container. Let's create our
 
 - start docker container, cause it quits once the previous step is done. Use command "docker start [name-of-container]". 
 - create an S3 bucket inside container using command "docker exec [name-of-container] aws s3 mb s3://[name-of-bucket]"
-- view all your S2 buckets using command "docker exec [name-of-container] aws s3 ls"
+- view all your S3 buckets using command "docker exec [name-of-container] aws s3 ls"
 
 P/S: for bucket name avoid using underscores
 
@@ -34,7 +34,7 @@ S3 bucket created successfully! Created a script to create user, setup user logi
 
 - create IAM user using command "./main.sh --user-setup aws" and follow the prompts
 
-P/S: Find proof of work in process_shots folder which is inside wk1s2 folder
+P/S: Find proof of work in process_shots folder here: https://drive.google.com/drive/folders/15DOfazMQCqS85AnDDZB-JybhNZeSC5R-?usp=drive_link
 
 ### The End!
 
