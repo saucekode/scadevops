@@ -7,7 +7,7 @@
 
 ## STEPS
 
-#### INSTALL AWS CLI & AWS ROOT USER CONFIGURATION
+### INSTALL AWS CLI & AWS ROOT USER CONFIGURATION
 Created a bash script to install aws cli via docker or locally. 
 
 - clone or fork this repository
@@ -20,7 +20,7 @@ Created a bash script to install aws cli via docker or locally.
 - if previous step was successful, you should see your container running in your docker desktop
 
 
-#### CREATE S3 BUCKET -- DOCKER APPROACH
+### CREATE S3 BUCKET -- DOCKER APPROACH
 Successfully pulled amazon/aws-cli image and spun up container. Let's create our S3 bucket!
 
 - start docker container, cause it quits once the previous step is done. Use command "docker start [name-of-container]". 
