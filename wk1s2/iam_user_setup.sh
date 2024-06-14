@@ -2,7 +2,14 @@
 
 set -e
 
-read -p "Please enter a name docker container: " container_name
+echo "View all your running containers..."
+docker ps
+read -p "Please enter docker container: " container_name
+
+if [[ -z "$container_name" ]]; then
+    echo "No container selected. Exiting..."
+    exit 0
+fi
 
 echo "Create new IAM user..."
 read -p "Please enter user name: " uname
@@ -17,3 +24,4 @@ docker exec -it $container_name aws iam create-access-key --user-name $uname
 
 echo "Setting up IAM user policies..."
 docker exec -it $container_name aws iam attach-user-policy --user-name $uname --policy-arn arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+docker exec -it $container_name aws iam attach-user-policy --user-name $uname --policy-arn arn:aws:iam::aws:policy/IAMUserChangePassword

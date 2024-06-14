@@ -17,18 +17,24 @@ Created a bash script to install aws cli via docker or locally.
 - for docker, run this "./main.sh --docker aws" [I chose this approach]
 - after the amazon/aws-cli iamge is pulled, it creates a container for you. If you prefer a custom name for your container, there is a prompt to enter a name
 - next up is aws configuration, this prompts you for an access key, secret key, region, and output --- I chose json for output
-- if previous step was successful, you should see your container running in your docker machine
+- if previous step was successful, you should see your container running in your docker desktop
 
 
 #### CREATE S3 BUCKET -- DOCKER APPROACH
 Successfully pulled amazon/aws-cli image and spun up container. Let's create our S3 bucket!
 
-- create an S3 bucket inside container using command "docker exec [name-of-container] aws s3 mb s3://[name-of-bucket]", for bucket name avoid using underscores
+- start docker container, cause it quits once the previous step is done. Use command "docker start [name-of-container]". 
+- create an S3 bucket inside container using command "docker exec [name-of-container] aws s3 mb s3://[name-of-bucket]"
+- view all your S2 buckets using command "docker exec [name-of-container] aws s3 ls"
+
+P/S: for bucket name avoid using underscores
 
 ### CREATE IAM USER -- DOCKER APPROACH
 S3 bucket created successfully! Created a script to create user, setup user login profile, assign access keys, and attach policies
 
 - create IAM user using command "./main.sh --user-setup aws" and follow the prompts
+
+P/S: Find proof of work in process_shots folder which is inside wk1s2 folder
 
 ### The End!
 
