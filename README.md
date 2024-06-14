@@ -8,7 +8,7 @@
 ## STEPS
 
 #### INSTALL AWS CLI & AWS ROOT USER CONFIGURATION
-Created a script to install aws cli via docker or locally. 
+Created a bash script to install aws cli via docker or locally. 
 
 - clone or fork this repository
 - cd into "wk1s2" folder in your terminal
