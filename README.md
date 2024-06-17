@@ -36,6 +36,11 @@ S3 bucket created successfully! Created a script to create user, setup user logi
 
 P/S: Find proof of work in process_shots folder here: https://drive.google.com/drive/folders/15DOfazMQCqS85AnDDZB-JybhNZeSC5R-?usp=drive_link
 
+
+## TASKS FOR SCALAGOS WEEK 2 SESSION 2
+- Research and host a simple website on S3
+
+Link to static website: http://amaka-scalagos.s3-website-us-east-1.amazonaws.com/
 ### The End!
 
 
