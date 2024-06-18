@@ -13,8 +13,8 @@ Created a bash script to install aws cli via docker or locally.
 - clone or fork this repository
 - cd into *wk1s2* folder in your terminal
 - to run script, grant execution rights to files in this folder using this command: ```chmod +x *```
-- for local installation, run this ```./main.sh --no-docker aws```, this command auto-detects your OS type and begins the installation process 
-- for docker, run this ```./main.sh --docker aws``` [I chose this approach]
+- for local installation, run this -- ```./main.sh --no-docker aws```, this command auto-detects your OS type and begins the installation process 
+- for docker, run this: ```./main.sh --docker aws``` [I chose this approach]
 - after the amazon/aws-cli iamge is pulled, it creates a container for you. If you prefer a custom name for your container, there is a prompt to enter a name
 - next up is aws configuration, this prompts you for an access key, secret key, region, and output --- I chose json for output
 - if previous step was successful, you should see your container running in your docker desktop
@@ -23,9 +23,9 @@ Created a bash script to install aws cli via docker or locally.
 #### CREATE S3 BUCKET -- DOCKER APPROACH
 Successfully pulled amazon/aws-cli image and spun up container? Let's create our S3 bucket!
 
-- start docker container, cause it quits once the previous step is done. Use command ```docker start name-of-container```
-- create an S3 bucket inside container using command ```docker exec name-of-container aws s3 mb s3://name-of-bucket```
-- view all your S3 buckets using command ```docker exec name-of-container aws s3 ls```
+- start docker container, cause it quits once the previous step is done. Use: ```docker start name-of-container```
+- create an S3 bucket inside container: ```docker exec name-of-container aws s3 mb s3://name-of-bucket```
+- view all your S3 buckets: ```docker exec name-of-container aws s3 ls```
 
 P/S: for bucket name avoid using underscores
 
@@ -48,11 +48,12 @@ Similar to Task 1, I will be using the CLI, which will run from Docker. Hosting 
 To sync my static files with AWS, I need to get a copy of them stored in a Docker volume, mount the volume to a target directory in a Docker container, and then perform the sync.
 
 - create docker volume: ```docker volume create name-of-volume```
-- Spin up new container and mount volume to target directory in container
+- Spin up new container and mount volume to target directory in container:
 ```docker run -it -v ~path-to-file-locally:target-directory-in-container --name name-of-container amazon/aws-cli configure```
 
-P/S: If static files is stored in user-specific directory like Desktop, Documents, etc, use the ~ when running this command to avoid permission issues
-- sync target directory in Docker container to AWS s3 bucket
+P/S: If static files is stored in user-specific directory like Desktop, Documents, etc, use the ~ when running this command to avoid permission issues.
+
+- sync target directory in Docker container to AWS s3 bucket:
 ``` aws s3 sync /target-directory-in-docker-container s3://bucket-name ```
 - Log into console to confirm
 
