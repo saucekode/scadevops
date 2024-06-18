@@ -62,13 +62,13 @@ P/S: If static files is stored in user-specific directory like Desktop, Document
 Still in the console: 
 - on the created s3 bucket, under properties, enable static website
 - input default page for your website, mine was index.html. Proceed to save.
-- url generated, here's mine: http://amaka-scalagos.s3-website-us-east-1.amazonaws.com/
+- url generated, here's mine: https://bit.ly/3KMmy4f
 
 
 #### SETUP BUCKET POLICY
 Under permissions:
 - turn off *Block all public access*, to enable access to your website
-- add a bucket policy to allow your website to viewed by anyone.
+- add a bucket policy to allow your website to be viewed by anyone:
 ``` 
     {
         "Version": "2012-10-17",
