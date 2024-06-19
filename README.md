@@ -97,7 +97,7 @@ P/S: Find proof of work in process_shots week 2 session 1 folder [here](https://
 - updated my s3 bucket policy to deny requests without the custom header
 
 #### RESULT
-Cloudfront distribution domain is the proxy domain for my s3 bucket static website. Link [here](https://d3rcenzx9spyru.cloudfront)net/" 
+Cloudfront distribution domain is the proxy domain for my s3 bucket static website. Link [here](https://d3rcenzx9spyru.cloudfront.net)
 
 P/S: Find proof of work in process_shots week 2 session 2 folder [here](https://drive.google.com/drive/folders/1wZNIjHh_YxJnEFi3jtjitUeKyDE48oCF?usp=sharing)
 
