@@ -34,7 +34,7 @@ S3 bucket created successfully! Created a script to create user, setup user logi
 
 - create IAM user using command ```./main.sh --user-setup aws``` and follow the prompts
 
-P/S: Find proof of work in process_shots folder here: https://drive.google.com/drive/folders/1OgapZuOJmXghctvdvrl-Y825A8LuYug3?usp=drive_link
+P/S: Find proof of work in process_shots week 1 session 2 folder [here](https://drive.google.com/drive/folders/1OgapZuOJmXghctvdvrl-Y825A8LuYug3?usp=sharing).
 
 
 # TASKS FOR SCALAGOS WEEK 2 SESSION 1
@@ -62,7 +62,9 @@ P/S: If static files is stored in user-specific directory like Desktop, Document
 Still in the console: 
 - on the created s3 bucket, under properties, enable static website
 - input default page for your website, mine was index.html. Proceed to save.
-- url generated, here's mine: https://bit.ly/3KMmy4f
+- url generated, here's [mine](http://amaka-scalagos.s3-website-us-east-1.amazonaws.com/). 
+
+P/S: I updated the bucket policy to deny all requests to my S3 bucket that do not include the CloudFront custom header. Use cloudfront distro [domain](https://d3rcenzx9spyru.cloudfront.net/).
 
 
 #### SETUP BUCKET POLICY
@@ -83,8 +85,21 @@ Under permissions:
         ]
     }
 ```
-P/S: Find proof of work in process_shots folder here: https://drive.google.com/drive/folders/1-_MATmvnXjuC8XgU4jIpvVJ8soVKs8HA?usp=drive_link
 
+P/S: Find proof of work in process_shots week 2 session 1 folder [here](https://drive.google.com/drive/folders/1-_MATmvnXjuC8XgU4jIpvVJ8soVKs8HA?usp=sharing)
+
+
+# TASKS FOR SCALAGOS WEEK 2 SESSION 2
+- Connect your website to Cloudfront
+
+#### APPROACH
+- connected my s3 bucket to a Cloudfront distribution with a custom header
+- updated my s3 bucket policy to deny requests without the custom header
+
+#### RESULT
+Cloudfront distribution domain is the proxy domain for my s3 bucket static website. Link [here](https://d3rcenzx9spyru.cloudfront)net/" 
+
+P/S: Find proof of work in process_shots week 2 session 2 folder [here](https://drive.google.com/drive/folders/1wZNIjHh_YxJnEFi3jtjitUeKyDE48oCF?usp=sharing)
 
 ### The End!
 
