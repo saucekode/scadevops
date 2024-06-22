@@ -34,7 +34,7 @@ S3 bucket created successfully! Created a script to create user, setup user logi
 
 - create IAM user using command ```./main.sh --user-setup aws``` and follow the prompts
 
-P/S: Find proof of work in process_shots week 1 session 2 folder [here](https://drive.google.com/drive/folders/1OgapZuOJmXghctvdvrl-Y825A8LuYug3?usp=sharing).
+P/S: Find process flow in process_shots week 1 session 2 folder [here](https://drive.google.com/drive/folders/1OgapZuOJmXghctvdvrl-Y825A8LuYug3?usp=sharing).
 
 
 # TASKS FOR SCALAGOS WEEK 2 SESSION 1
@@ -86,20 +86,32 @@ Under permissions:
     }
 ```
 
-P/S: Find proof of work in process_shots week 2 session 1 folder [here](https://drive.google.com/drive/folders/1-_MATmvnXjuC8XgU4jIpvVJ8soVKs8HA?usp=sharing)
+P/S: Find process flow in process_shots week 2 session 1 folder [here](https://drive.google.com/drive/folders/1-_MATmvnXjuC8XgU4jIpvVJ8soVKs8HA?usp=sharing)
 
 
 # TASKS FOR SCALAGOS WEEK 2 SESSION 2
 - Connect your website to Cloudfront
 
 #### APPROACH
+- used the AWS console for this 
 - connected my s3 bucket to a Cloudfront distribution with a custom header
 - updated my s3 bucket policy to deny requests without the custom header
 
 #### RESULT
 Cloudfront distribution domain is the proxy domain for my s3 bucket static website. Link [here](https://d3rcenzx9spyru.cloudfront.net)
 
-P/S: Find proof of work in process_shots week 2 session 2 folder [here](https://drive.google.com/drive/folders/1wZNIjHh_YxJnEFi3jtjitUeKyDE48oCF?usp=sharing)
+P/S: Find process flow in process_shots week 2 session 2 folder [here](https://drive.google.com/drive/folders/1wZNIjHh_YxJnEFi3jtjitUeKyDE48oCF?usp=sharing)
+
+
+# TASKS FOR SCALAGOS WEEK 3 SESSION 1
+- Set up  LAMP stack  webserver using Cloud Formation. On your webserver echo “Sample web from SCALAgos TDD  created by yourname and Attendance Number”
+- Let you webserver, instance, vpc and other resources be created with the suffix scatdd_yourname_xxx
+- Run your webserver and capture the screen, save screen shot on your repo
+- Add a ReadMe that explains how to run the script
+
+#### APPROACH
+Using Docker and the AWS CLI for this task.
+
 
 ### The End!
 
