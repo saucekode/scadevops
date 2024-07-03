@@ -80,7 +80,7 @@ Under permissions:
                 "Effect": "Allow",
                 "Principal": "*",
                 "Action": "s3:GetObject",
-                "Resource": "arn:aws:s3:::amaka-scalagos/*"
+                "Resource": "arn:aws:s3:::[bucket-name]/*"
             }
         ]
     }
